@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Nova Encomenda</title>
+  </head>
+  <body>
+    <h1>Fazer Encomenda</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <h3>Produtos</h3>
+
+      {% for produto in produtos %}
+      <div>
+        <strong>{{ produto.nome }}</strong> - R$ {{ produto.valor }}
+        <br />
+        Quantidade:
+        <input type="number" name="produto_{{ produto.id }}" min="0" />
+      </div>
+      <hr />
+      {% endfor %}
+
+      <h3>Data de retirada</h3>
+      <input type="date" name="data_retirada" />
+
+      <h3>Observações</h3>
+      <textarea name="observacoes"></textarea>
+
+      <br /><br />
+      <button type="submit">Finalizar Encomenda</button>
+    </form>
+  </body>
+</html>

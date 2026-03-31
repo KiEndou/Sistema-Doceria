@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Doceria</title>
+  </head>
+  <body>
+    <h1>Catálogo</h1>
+
+    <h2>Pronta Entrega</h2>
+    {% for produto in produtos %} {% if produto.tipo == "pronta_entrega" %}
+    <div>
+      <h3>{{ produto.nome }}</h3>
+      <p>{{ produto.descricao }}</p>
+      <p>R$ {{ produto.valor }}</p>
+    </div>
+    {% endif %} {% endfor %}
+    <a href="{% url 'criar_encomenda' %}">Fazer Encomenda</a>
+    <h2>Encomendas</h2>
+    {% for produto in produtos %} {% if produto.tipo == "encomenda" %}
+    <div>
+      <h3>{{ produto.nome }}</h3>
+      <p>{{ produto.descricao }}</p>
+      <p>R$ {{ produto.valor }}</p>
+    </div>
+    {% endif %} {% endfor %}
+    <a href="{% url 'criar_encomenda' %}">Fazer Encomenda</a>
+  </body>
+</html>
