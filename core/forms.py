@@ -15,7 +15,7 @@ class CadastroClienteForm(forms.ModelForm):
     class Meta:
         model = Cliente
 
-        # ⚠️ NÃO usamos 'user' aqui diretamente
+        # N usamos 'user' aqui diretamente
         # porque vamos criar o User manualmente no save()
         fields = ['nome', 'telefone', 'endereco']
 
