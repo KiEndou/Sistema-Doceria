@@ -3,6 +3,7 @@ Desenvolvido por:
 - David Rodrigues Costa
 - Pedro Henrique Guedes
 - Pedro Igor Ferreira de Carvalho
+- Karlos
   
 ## Descrição
 Este projeto consiste no desenvolvimento de um sistema web para gestão de uma doceria, com foco no controle de clientes, produtos e encomendas.
